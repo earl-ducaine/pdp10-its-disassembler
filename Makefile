@@ -5,7 +5,8 @@ FILES =  sblk-file.o pdump-file.o dmp-file.o raw-file.o shr-file.o \
 	 mdl-file.o
 
 WORDS =  aa-word.o bin-word.o cadr-word.o core-word.o data8-word.o \
-	 dta-word.o its-word.o oct-word.o pt-word.o tape-word.o x-word.o
+	 dta-word.o its-word.o oct-word.o pt-word.o sail-word.o tape-word.o \
+	 x-word.o
 
 OBJS =	pdp10-opc.o info.o dis.o symbols.o \
 	timing.o timing_ka10.o timing_ki10.o memory.o weenix.o
@@ -177,6 +178,7 @@ memory.o: memory.c memory.h dis.h
 oct-word.o: oct-word.c dis.h
 pdp10-opc.o: pdp10-opc.c opcode/pdp10.h
 pdump.o: pdump.c dis.h memory.h
+sail-word.o: sail-word.c dis.h
 sblk.o: sblk.c dis.h memory.h
 scrmbl.o: scrmbl.c dis.h
 timing.o: timing.c opcode/pdp10.h timing.h dis.h
